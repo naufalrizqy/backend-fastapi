@@ -450,11 +450,13 @@ def predict_summary_for_campaign(campaign: dict, max_days: int = 90, preview_n: 
 
     result = {
         "campaign_id": campaign_id,
+
         "title": title,
         "thumbnail": campaign.get("thumbnail"),
         "target": target,
         "raised": raised,
         "remaining": remaining,
+        "created_at": campaign.get("created_at"),
         "end_date": end_date,
         "days_left": days_left,
         "status": campaign.get("status"),
